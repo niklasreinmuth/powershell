@@ -1,0 +1,69 @@
+{
+  "language_settings": [
+    {
+      "location": "Barcelona",
+      "language": "es",
+      "timezone": "Madrid"
+    },
+    {
+      "location": "Cressa",
+      "language": "it",
+      "timezone": "Rome"
+    },
+    {
+      "location": "Dobrich",
+      "language": "en",
+      "timezone": "Sofia"
+    },
+    {
+      "location": "Hongkong",
+      "language": "zh-CN",
+      "timezone": "Beijing"
+    },
+    {
+      "location": "Malvern",
+      "language": "en",
+      "timezone": "London"
+    },
+    {
+      "location": "Monza",
+      "language": "it",
+      "timezone": "Rome"
+    },
+    {
+      "location": "Muellheim",
+      "language": "de",
+      "timezone": "Berlin"
+    },
+    {
+      "location": "Randers",
+      "language": "da",
+      "timezone": "Copenhagen"
+    },
+    {
+      "location": "Reinach",
+      "language": "de",
+      "timezone": "Zurich"
+    },
+    {
+      "location": "Shanghai",
+      "language": "zh-CN",
+      "timezone": "Beijing"
+    },
+    {
+      "location": "Soncino",
+      "language": "it",
+      "timezone": "Rome"
+    },
+    {
+      "location": "Waterbury",
+      "language": "en",
+      "timezone": "Eastern Time (US & Canada)"
+    },
+    {
+      "location": "Xinhui",
+      "language": "zh-CN",
+      "timezone": "Beijing"
+    }
+  ]
+}
