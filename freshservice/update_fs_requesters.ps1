@@ -1,7 +1,6 @@
-# Authentication bei Freshservice
-# $api_key durch den API Key des Ticketerstellers ersetzen
+# Connection
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::TLS12
-$api_key = 'FRESHSERVICE API KEY' # API Key ersetzen
+$api_key = 'FRESHSERVICE API KEY'
 $encoded_credentials = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(("{0}:{1}" -f $api_key, $null)))
 $http_headers = @{}
 $http_headers.add('Authorization', ("Basic {0}" -f $encoded_credentials))
