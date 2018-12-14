@@ -24,8 +24,8 @@ function Get-ComputerInfo
 				Try
 				{
 					$Version = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name ReleaseID -ErrorAction Stop).ReleaseID
-                    $CPU = Get-CimInstance -ComputerName $computer -ClassName Win32_Processor
-                    $CPUName = $CPU.Name
+					$CPU = Get-CimInstance -ComputerName $computer -ClassName Win32_Processor
+					$CPUName = $CPU.Name
                     $CPUClock = $CPU.MaxClockSpeed
                     $RAM = Get-CimInstance Win32_PhysicalMemory | Measure-Object -Property capacity -Sum | Foreach {"{0:N2}" -f ([math]::round(($_.Sum / 1GB),2))}
                     $DiskID = ((Get-Partition -DriveLetter C).UniqueId).split('}')[-1]
