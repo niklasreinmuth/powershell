@@ -26,21 +26,21 @@ function Get-ComputerInfo
 					$Version = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' -Name ReleaseID -ErrorAction Stop).ReleaseID
 					$CPU = Get-CimInstance -ComputerName $computer -ClassName Win32_Processor
 					$CPUName = $CPU.Name
-                    $CPUClock = $CPU.MaxClockSpeed
-                    $RAM = Get-CimInstance Win32_PhysicalMemory | Measure-Object -Property capacity -Sum | Foreach {"{0:N2}" -f ([math]::round(($_.Sum / 1GB),2))}
-                    $DiskID = ((Get-Partition -DriveLetter C).UniqueId).split('}')[-1]
-                    $Disk = Get-PhysicalDisk -UniqueId $DiskID
-                    $DiskType = $Disk.MediaType
-                    $DiskSize = ([math]::round(($Disk.Size / 1GB),2))
+					$CPUClock = $CPU.MaxClockSpeed
+					$RAM = Get-CimInstance Win32_PhysicalMemory | Measure-Object -Property capacity -Sum | Foreach {"{0:N2}" -f ([math]::round(($_.Sum / 1GB),2))}
+					$DiskID = ((Get-Partition -DriveLetter C).UniqueId).split('}')[-1]
+					$Disk = Get-PhysicalDisk -UniqueId $DiskID
+					$DiskType = $Disk.MediaType
+					$DiskSize = ([math]::round(($Disk.Size / 1GB),2))
 				}
 				Catch
 				{
 					$Version = "N/A"
-                    $CPUName  = "N/A"
-                    $CPUClock = "N/A"
-                    $RAM = "N/A"
-                    $DiskType = "N/A"
-                    $DiskSize = "N/A"
+					$CPUName  = "N/A"
+					$CPUClock = "N/A"
+					$RAM = "N/A"
+					$DiskType = "N/A"
+					$DiskSize = "N/A"
 				}
 
 				$TempTable = New-Object System.Data.DataTable
